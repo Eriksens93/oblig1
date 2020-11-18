@@ -15,27 +15,40 @@ function isDateValid(dateString) {
 
 }
 
+// Sjekker lengde 
+
 function isLengthCorrect(dateLength) {
     return dateLength.length == 10;
 
 }
+
+// Sjekker om det er punktum i tredje og i sjette posisjon
+
     function isSetupcorrect(dateString) {
     return dateString.charAt(2) === '.' && dateString.charAt(5) === '.';
     }
 
+// Sjekker om året er 0000 eller større og 9999 eller mindre
+
 function isYearCorrect(year) {
     return parseInt(year) >= 0000 && parseInt(year) <=9999;
 }
+
+// Sjekker om mnd er 1-12
 
 function isMonthCorrect(month) {
     return parseInt(month) >=01 && parseInt(month) <= 12 && month.length ==2;
 
 }
 
+// Sjekker om det er skuddår
+
 function isLeapYear(year) {
     return (year) % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 
 }
+
+// Sjekker antall dager per mnd 
 
 function isDayCorrect(day,month,year) {
     if ((month === '02') && (day <= '28')) {
